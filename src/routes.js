@@ -14,6 +14,12 @@ const routes = [
       {
         path: "/",
         element: <Home />,
+        children: [
+          {
+            path: "/profile/:id",
+            element: <UserProfile />,
+          },
+        ]
       },
       {
         path: "/about",
@@ -22,10 +28,6 @@ const routes = [
       {
         path: "/login",
         element: <Login />,
-      },
-      {
-        path: "/profile/:id",
-        element: <UserProfile />,
       },
     ],
   },
